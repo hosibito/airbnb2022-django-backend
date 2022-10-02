@@ -10,6 +10,7 @@ class RoomAdmin(admin.ModelAdmin):
         "price",
         "kind",
         "total_amenities",
+        "rating",
         "owner",
         "created_at",
         "updated_at",
@@ -25,9 +26,9 @@ class RoomAdmin(admin.ModelAdmin):
         "updated_at",
     )
 
-    # 이게 어드민에 있을지 모델이 있을지를 잘 결정해야 한다.
-    def total_amenities(self, room):
-        return room.amenities.count()
+    # # 이게 어드민에 있을지 모델이 있을지를 잘 결정해야 한다.
+    # def total_amenities(self, room):
+    #     return room.amenities.count()
 
 
 @admin.register(Amenity)
